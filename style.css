@@ -127,6 +127,15 @@ body.light-theme .navbar.scrolled {
   color: var(--text-color);
   text-decoration: none;
   letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 22%;
+  display: block;
 }
 
 .nav-links {
@@ -260,17 +269,23 @@ body.loading { overflow: hidden; }
 
 body.light-theme #preloader { background-color: #f8fafc; }
 
-.preloader-logo {
-  font-weight: 800;
-  font-size: 1.4rem;
-  letter-spacing: 0.05em;
-  color: var(--text-color);
-  animation: pulseLogo 2s infinite ease-in-out;
+.preloader-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes pulseLogo {
-  0%, 100% { opacity: 0.5; transform: scale(0.98); }
-  50% { opacity: 1; transform: scale(1); }
+.preloader-spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(180, 255, 199, 0.2);
+  border-top-color: #B4FFC7;
+  animation: preloaderSpin 0.8s linear infinite;
+}
+
+@keyframes preloaderSpin {
+  to { transform: rotate(360deg); }
 }
 
 .hero-wrapper {
@@ -302,23 +317,12 @@ body.light-theme #preloader { background-color: #f8fafc; }
 
 body.light-theme .hero-showcase { border: 1px solid rgba(0, 0, 0, 0.1); background: #eef1ee; }
 
-.hero-bg-symbols {
+.hero-bg-image {
   position: absolute;
   inset: 0;
-  overflow: hidden;
-}
-
-.hero-bg-symbols span {
-  position: absolute;
-  font-family: 'Inter', monospace;
-  font-size: 15px;
-  color: rgba(123, 219, 63, 0.3);
-  animation: heroFlicker 3.5s ease-in-out infinite;
-}
-
-@keyframes heroFlicker {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 0.85; }
+  background-image: url("images/hero-visual.png");
+  background-size: cover;
+  background-position: right center;
 }
 
 .hero-overlay {
@@ -459,11 +463,11 @@ body.light-theme .service-card:hover {
   justify-content: center;
 }
 
-.service-glyph {
-  font-family: 'Inter', monospace;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.55);
+.service-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .service-info { padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; }
@@ -877,5 +881,5 @@ body.light-theme .footer-bottom { border-color: rgba(0, 0, 0, 0.1); color: rgba(
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-bg-symbols span, .preloader-logo { animation: none; }
+  .preloader-spinner { animation: none; }
 }
