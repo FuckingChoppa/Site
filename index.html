@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
 <title>CHOPPA - портфолио</title>
 <meta name="description" content="Портфолио">
 </head>
@@ -14,15 +16,13 @@
 
 <div id="preloader">
   <div class="preloader-content">
-    <span class="preloader-logo">choppa</span>
+    <div class="preloader-spinner"></div>
   </div>
 </div>
 
 <nav class="navbar">
   <div class="nav-container">
-    <a href="#home" class="nav-logo">choppa</a>
-
-    <div class="hamburger" id="hamburger">
+    <a href="#home" class="nav-logo"><img src="images/logo.png" alt="choppa"></a>
       <span></span>
       <span></span>
       <span></span>
@@ -62,7 +62,7 @@
 
   <div class="hero-wrapper" id="home">
     <section class="hero-showcase">
-      <div class="hero-bg-symbols" id="heroBg"></div>
+      <div class="hero-bg-image"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 class="hero-title">CHOPPA</h1>
@@ -86,8 +86,8 @@
 
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-img-wrapper" style="background: linear-gradient(150deg, #7bdb3f, #163b0f)">
-          <span class="service-glyph">&lt;/&gt;</span>
+        <div class="service-img-wrapper">
+          <img class="service-icon" src="images/icons/service-web.png" alt="">
         </div>
         <div class="service-info">
           <h3>Веб-разработка</h3>
@@ -97,8 +97,8 @@
       </div>
 
       <div class="service-card">
-        <div class="service-img-wrapper" style="background: linear-gradient(150deg, #ffcf4d, #4d3a10)">
-          <span class="service-glyph">{ }</span>
+        <div class="service-img-wrapper">
+          <img class="service-icon" src="images/icons/service-bots.png" alt="">
         </div>
         <div class="service-info">
           <h3>Разработка ботов</h3>
@@ -108,8 +108,8 @@
       </div>
 
       <div class="service-card">
-        <div class="service-img-wrapper" style="background: linear-gradient(150deg, #7bdb3f, #163b0f)">
-          <span class="service-glyph">#</span>
+        <div class="service-img-wrapper">
+          <img class="service-icon" src="images/icons/service-backend.png" alt="">
         </div>
         <div class="service-info">
           <h3>Backend и интеграции</h3>
@@ -119,8 +119,8 @@
       </div>
 
       <div class="service-card">
-        <div class="service-img-wrapper" style="background: linear-gradient(150deg, #ffcf4d, #4d3a10)">
-          <span class="service-glyph">*</span>
+        <div class="service-img-wrapper">
+          <img class="service-icon" src="images/icons/service-uiux.png" alt="">
         </div>
         <div class="service-info">
           <h3>UI / UX</h3>
@@ -130,8 +130,8 @@
       </div>
 
       <div class="service-card">
-        <div class="service-img-wrapper" style="background: linear-gradient(150deg, #7bdb3f, #163b0f)">
-          <span class="service-glyph">~</span>
+        <div class="service-img-wrapper">
+          <img class="service-icon" src="images/icons/service-support-dev.png" alt="">
         </div>
         <div class="service-info">
           <h3>Поддержка, оптимизация и доработка</h3>
@@ -141,8 +141,8 @@
       </div>
 
       <div class="service-card">
-        <div class="service-img-wrapper" style="background: linear-gradient(150deg, #ffcf4d, #4d3a10)">
-          <span class="service-glyph">?</span>
+        <div class="service-img-wrapper">
+          <img class="service-icon" src="images/icons/service-support.png" alt="">
         </div>
         <div class="service-info">
           <h3>Поддержка</h3>
@@ -197,6 +197,17 @@
       <div class="reviews-marquee-track">
         <div class="review-card">
           <div class="review-header">
+            <div class="review-avatar">N</div>
+            <div class="review-user">
+              <h4>Nokixa</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">Охуенно написал бота, только одна правка была и потом всё работало, советую</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
             <div class="review-avatar">R</div>
             <div class="review-user">
               <h4>runnyx</h4>
@@ -204,6 +215,17 @@
             </div>
           </div>
           <p class="review-text">Заказал разработку бота, тип крутой, сделал всё быстро и качественно ставлю лосяру</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div class="review-user">
+              <h4>methwho</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">Автоматизировал подачу заявок через бота, при чём за маленькую цену @FuckingChoppa</p>
         </div>
 
         <div class="review-card">
@@ -241,6 +263,17 @@
 
         <div class="review-card">
           <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div class="review-user">
+              <h4>methwho</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">Автоматизировал подачу заявок через бота, при чём за маленькую цену @FuckingChoppa</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
             <div class="review-avatar">Л</div>
             <div class="review-user">
               <h4>Лишев</h4>
@@ -248,30 +281,19 @@
             </div>
           </div>
           <p class="review-text">Хз ну бота мне в тг написал вроде круто</p>
-        </div>
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar">N</div>
-            <div class="review-user">
-              <h4>Nokixa</h4>
-              <div class="stars">★★★★★</div>
-            </div>
-          </div>
-          <p class="review-text">Охуенно написал бота, только одна правка была и потом всё работало, советую</p>
         </div>
       </div>
 
       <div class="reviews-marquee-track reverse">
         <div class="review-card">
           <div class="review-header">
-            <div class="review-avatar">N</div>
+            <div class="review-avatar">M</div>
             <div class="review-user">
-              <h4>Nokixa</h4>
+              <h4>methwho</h4>
               <div class="stars">★★★★★</div>
             </div>
           </div>
-          <p class="review-text">Охуенно написал бота, только одна правка была и потом всё работало, советую</p>
+          <p class="review-text">Автоматизировал подачу заявок через бота, при чём за маленькую цену @FuckingChoppa</p>
         </div>
 
         <div class="review-card">
@@ -283,6 +305,17 @@
             </div>
           </div>
           <p class="review-text">Хз ну бота мне в тг написал вроде круто</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">N</div>
+            <div class="review-user">
+              <h4>Nokixa</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">Охуенно написал бота, только одна правка была и потом всё работало, советую</p>
         </div>
 
         <div class="review-card">
@@ -298,13 +331,13 @@
 
         <div class="review-card">
           <div class="review-header">
-            <div class="review-avatar">N</div>
+            <div class="review-avatar">M</div>
             <div class="review-user">
-              <h4>Nokixa</h4>
+              <h4>methwho</h4>
               <div class="stars">★★★★★</div>
             </div>
           </div>
-          <p class="review-text">Охуенно написал бота, только одна правка была и потом всё работало, советую</p>
+          <p class="review-text">Автоматизировал подачу заявок через бота, при чём за маленькую цену @FuckingChoppa</p>
         </div>
 
         <div class="review-card">
@@ -316,6 +349,17 @@
             </div>
           </div>
           <p class="review-text">Хз ну бота мне в тг написал вроде круто</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">N</div>
+            <div class="review-user">
+              <h4>Nokixa</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">Охуенно написал бота, только одна правка была и потом всё работало, советую</p>
         </div>
 
         <div class="review-card">
@@ -363,7 +407,7 @@
 <footer class="footer" id="contact">
   <div class="footer-container">
     <div class="footer-brand">
-      <a href="#home" class="nav-logo">choppa</a>
+      <a href="#home" class="nav-logo"><img src="images/logo.png" alt="choppa"></a>
     </div>
     <div class="footer-links-wrapper">
       <div class="footer-links">
